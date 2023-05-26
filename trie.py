@@ -91,6 +91,11 @@ def main():
     assert app_partial
     assert char_partial
 
+    assert "apple" in appl_matches
+    assert "applicant" in appl_matches
+    assert "application" in appl_matches
+
+
 
 if __name__ == "__main__":
     main()
