@@ -1,5 +1,5 @@
 from typing import List
-from queue import PriorityQueue
+from queue import Queue
 
 
 class TrieNode:
@@ -50,16 +50,16 @@ class Trie:
         if node is None:
             return matches
         cur = node
-        pq = PriorityQueue()
-        pq.put((word, cur))
+        q = Queue()
+        q.put((word, cur))
 
-        while not pq.empty():
-            word_q, node_q = pq.get()
+        while not q.empty():
+            word_q, node_q = q.get()
             for c, cur_n in node_q.data.items():
                 c_word = word_q + c
                 if cur_n.word_ending:
                     matches.append(c_word)
-                pq.put((c_word, cur_n))
+                q.put((c_word, cur_n))
 
         return matches
 
