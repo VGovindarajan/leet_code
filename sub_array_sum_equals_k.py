@@ -1083,7 +1083,7 @@ def main():
     print(actual3)
     assert expected3 == actual3
 
-    input4 = [1, 1, 2, 1, 2, 3, 0, 2, 3, 2]
+    input4 = [1, 1, 2, 1, 2, 3, 0, 2, 3, 2, 1]
     k4 = 5
     expected4 = 8
     actual4 = subarray_sum1(input4, k4)
